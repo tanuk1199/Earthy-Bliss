@@ -454,18 +454,35 @@ function BonusPageContent() {
         </div>
       </section>
 
-      {/* Cross-Sell Products */}
+      {/* ORIGINAL SINGLE SECTION (replaced — to revert, uncomment this and remove the two sections below)
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12 text-center">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-3">Recommended Tools</h2>
+            <p className="font-sans text-muted-foreground text-lg">Everything you need to create bakery-quality bread at home</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            — Share the Craft Set card ($69) —
+            — Bliss Bag card ($30) —
+            — Everything Sourdough Baking Set card —
+          </div>
+        </div>
+      </section>
+      END ORIGINAL */}
+
+      {/* Gift Sets — for buying for others */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-3">
-              Recommended Tools
+              Gift Sets for Every Occasion
             </h2>
             <p className="font-sans text-muted-foreground text-lg">
-              {'Everything you need to create bakery-quality bread at home'}
+              {'Know someone who'd love great bread? There's a set for that.'}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Share the Craft Set */}
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-square overflow-hidden bg-muted">
                 <img
@@ -476,7 +493,7 @@ function BonusPageContent() {
               </div>
               <CardContent className="p-6">
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
-                  Breadly Share the Craft Set
+                  Share the Craft Set
                 </h3>
                 <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
                   {'A gift for anyone who loves great bread, whether they bake it or bring it home fresh.'}
@@ -493,6 +510,77 @@ function BonusPageContent() {
               </CardContent>
             </Card>
 
+            {/* Everything Sourdough Set */}
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-square overflow-hidden bg-muted">
+                <img
+                  src={productImages.everythingSourdoughSet}
+                  alt="Everything Sourdough Set"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">
+                  Everything Sourdough Set
+                </h3>
+                <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
+                  {'Everything a beginner baker needs to get started. Includes our bestselling Breadly knife and e-guides.'}
+                </p>
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className="font-sans text-2xl font-bold text-primary">$99</span>
+                </div>
+                <Button className="w-full font-sans" asChild>
+                  <a href="https://earthyblissco.com/products/everything-sourdough-baking-set" target="_blank" rel="noopener noreferrer">
+                    Shop Now
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* The Heirloom Set */}
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
+              <div className="aspect-square overflow-hidden bg-muted">
+                {/* IMAGE: Premium bundle — Breadly + cutting board + Bliss Bag + wood balm + spare blades — lifestyle shot */}
+                <img
+                  src={productImages.shareTheCraftSet}
+                  alt="The Heirloom Set"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-6">
+                <h3 className="font-serif text-xl font-bold text-foreground mb-2">
+                  The Heirloom Set
+                </h3>
+                <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
+                  {'For those special occasions. Anniversaries, weddings, housewarming. A gift they\'ll keep forever.'}
+                </p>
+                <div className="flex items-baseline gap-2 mb-4">
+                  <span className="font-sans text-2xl font-bold text-primary">$149</span>
+                </div>
+                <Button className="w-full font-sans" asChild>
+                  <a href="https://earthyblissco.com/products/heirloom-set" target="_blank" rel="noopener noreferrer">
+                    Shop Now
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Expand Your Toolkit — for existing Breadly owners */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#FFEFD2' }}>
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-12 text-center">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold mb-3" style={{ color: '#2D150B' }}>
+              Expand Your Toolkit
+            </h2>
+            <p className="font-sans text-lg" style={{ color: '#3E3E3E' }}>
+              {'For bakers who already own a Breadly'}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            {/* Bliss Bag */}
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-square overflow-hidden bg-muted">
                 <img
@@ -503,10 +591,10 @@ function BonusPageContent() {
               </div>
               <CardContent className="p-6">
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
-                  The Bliss Bag Bread Bag
+                  The Bliss Bag
                 </h3>
                 <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
-                  {'Beeswax-lined linen bag that keeps bread crusty outside and soft inside for days.'}
+                  {'Keeps bread crusty outside and soft inside for days. No more stale loaves.'}
                 </p>
                 <div className="flex items-baseline gap-2 mb-4">
                   <span className="font-sans text-2xl font-bold text-primary">$30</span>
@@ -519,6 +607,7 @@ function BonusPageContent() {
               </CardContent>
             </Card>
 
+            {/* Everything Sourdough Baking Set (no Breadly) */}
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-square overflow-hidden bg-muted">
                 <img
@@ -532,7 +621,7 @@ function BonusPageContent() {
                   Everything Sourdough Baking Set
                 </h3>
                 <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
-                  {'Everything you need to start your sourdough journey. The complete baking set for beginners and pros alike.'}
+                  {'The complete baking set for your sourdough journey. Banneton, scraper, lame, and more.'}
                 </p>
                 <div className="flex items-baseline gap-2 mb-4">
                   <span className="font-sans text-2xl font-bold text-primary">Shop Set</span>
