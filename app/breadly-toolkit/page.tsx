@@ -470,20 +470,21 @@ function BonusPageContent() {
               <div className="aspect-square overflow-hidden bg-muted">
                 <img
                   src={productImages.shareTheCraftSet}
-                  alt="Breadly™ Share the Craft Set"
+                  alt="Breadly Share the Craft Set"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-6">
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
-                  Breadly™ Share the Craft Set
+                  Breadly Share the Craft Set
                 </h3>
                 <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
                   {'The perfect gift for bread lovers. Beautifully packaged set of 2 or 4 Breadly knives to share the craft.'}
                 </p>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="font-sans text-2xl font-bold text-primary">From $89</span>
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="font-sans text-2xl font-bold text-primary">From $69</span>
                 </div>
+                <p className="font-sans text-sm text-muted-foreground mb-4">Free Shipping Available</p>
                 <Button className="w-full font-sans" asChild>
                   <a href="https://earthyblissco.com/products/share-the-craft-set" target="_blank" rel="noopener noreferrer">
                     Shop Now
@@ -496,23 +497,22 @@ function BonusPageContent() {
               <div className="aspect-square overflow-hidden bg-muted">
                 <img
                   src={productImages.blissBag}
-                  alt="The Bliss Bag™"
+                  alt="The Bliss Bag"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-6">
                 <h3 className="font-serif text-xl font-bold text-foreground mb-2">
-                  The Bliss Bag™ Bread Bag
+                  The Bliss Bag Bread Bag
                 </h3>
                 <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
                   {'Beeswax-lined linen bag that keeps bread crusty outside and soft inside for days.'}
                 </p>
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="font-sans text-2xl font-bold text-primary">$45</span>
-                  <span className="font-sans text-sm text-muted-foreground">BOGO Available</span>
+                  <span className="font-sans text-2xl font-bold text-primary">$30</span>
                 </div>
                 <Button className="w-full font-sans" asChild>
-                  <a href="https://earthyblissco.com/products/the-bliss-bag" target="_blank" rel="noopener noreferrer">
+                  <a href="https://earthyblissco.com/products/bliss-bags-solo" target="_blank" rel="noopener noreferrer">
                     Shop Now
                   </a>
                 </Button>
