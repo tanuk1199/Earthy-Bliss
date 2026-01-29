@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -9,6 +9,14 @@ import { Download, Clock, BookOpen, Gift, Users, Copy, Check, Instagram, Faceboo
 import { articleImages, ebookImages, ebookDownloads, productImages, communityImages } from "@/lib/images"
 
 export default function BonusPage() {
+  return (
+    <Suspense>
+      <BonusPageContent />
+    </Suspense>
+  )
+}
+
+function BonusPageContent() {
   const [copied, setCopied] = useState(false)
   const searchParams = useSearchParams()
 
