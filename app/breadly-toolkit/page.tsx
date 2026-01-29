@@ -479,7 +479,7 @@ function BonusPageContent() {
                   Breadly Share the Craft Set
                 </h3>
                 <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
-                  {'The perfect gift for bread lovers. Beautifully packaged set of 2 or 4 Breadly knives to share the craft.'}
+                  {'A gift for anyone who loves great bread, whether they bake it or bring it home fresh.'}
                 </p>
                 <div className="flex items-baseline gap-2 mb-1">
                   <span className="font-sans text-2xl font-bold text-primary">From $69</span>
