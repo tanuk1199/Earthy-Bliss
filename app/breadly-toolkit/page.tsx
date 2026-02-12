@@ -183,7 +183,7 @@ function BonusPageContent() {
               {'Expert insights and techniques for better baking'}
             </p>
           </div>
-          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide" style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 pl-6 pr-4 md:mx-0 md:px-0 scrollbar-hide" style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
             {blogPosts.map((post) => (
               <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow w-[75vw] min-w-[75vw] md:w-auto md:min-w-0 snap-start flex-shrink-0 md:flex-shrink">
                 <div className="aspect-[4/3] md:aspect-video overflow-hidden">
