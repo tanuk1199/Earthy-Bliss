@@ -317,36 +317,36 @@ function BonusPageContent() {
               {'Click any image to access your FREE ebook'}
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 overflow-x-auto sm:overflow-x-visible snap-x snap-mandatory pb-4 sm:pb-0 -mx-4 pl-6 pr-4 sm:mx-0 sm:px-0" style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
             {ebooks.map((ebook) => (
-              <Card key={ebook.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <Card key={ebook.id} className="group cursor-pointer hover:shadow-xl transition-all duration-300 overflow-hidden w-[75vw] min-w-[75vw] sm:w-auto sm:min-w-0 snap-start flex-shrink-0 sm:flex-shrink">
                 <div className="aspect-[3/4] overflow-hidden bg-muted">
-                  <img 
-                    src={ebook.image || "/placeholder.svg"} 
+                  <img
+                    src={ebook.image || "/placeholder.svg"}
                     alt={ebook.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <CardContent className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge className="font-sans text-xs">{ebook.format}</Badge>
+                <CardContent className="p-3 sm:p-4">
+                  <div className="flex items-center justify-between mb-1 sm:mb-2">
+                    <Badge className="font-sans text-[10px] sm:text-xs">{ebook.format}</Badge>
                   </div>
-                  <h3 className="font-serif text-lg font-bold text-foreground mb-1">
+                  <h3 className="font-serif text-sm sm:text-lg font-bold text-foreground mb-1">
                     {ebook.title}
                   </h3>
-                  <p className="font-sans text-sm text-muted-foreground mb-4 leading-relaxed">
+                  <p className="font-sans text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 leading-relaxed line-clamp-2">
                     {ebook.subtitle}
                   </p>
                   {ebook.downloadUrl ? (
-                    <Button className="w-full font-sans" size="sm" asChild>
+                    <Button className="w-full font-sans text-xs sm:text-sm h-8 sm:h-9" size="sm" asChild>
                       <a href={ebook.downloadUrl} target="_blank" rel="noopener noreferrer" download>
-                        <Download className="h-4 w-4 mr-2" />
+                        <Download className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                         Download
                       </a>
                     </Button>
                   ) : (
-                    <Button className="w-full font-sans" size="sm" disabled>
-                      <Download className="h-4 w-4 mr-2" />
+                    <Button className="w-full font-sans text-xs sm:text-sm h-8 sm:h-9" size="sm" disabled>
+                      <Download className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                       Coming Soon
                     </Button>
                   )}
@@ -551,6 +551,18 @@ function BonusPageContent() {
         </div>
       </section>
       END ORIGINAL */}
+
+      {/* Gift15 Discount Banner */}
+      <section className="py-6 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#2D150B' }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="font-serif text-lg sm:text-2xl font-bold mb-1" style={{ color: '#FFEFD2' }}>
+            Use code <span className="font-mono tracking-wider px-2 py-0.5 rounded mx-1" style={{ backgroundColor: 'rgba(203, 172, 150, 0.2)', color: '#CBAC96' }}>GIFT15</span> for 15% off our gift sets
+          </p>
+          <p className="font-sans text-xs sm:text-sm" style={{ color: 'rgba(255, 239, 210, 0.6)' }}>
+            Share the love of baking with someone special
+          </p>
+        </div>
+      </section>
 
       {/* Gift Sets — for buying for others */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
