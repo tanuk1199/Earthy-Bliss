@@ -147,6 +147,13 @@ function BonusPageContent() {
 
   return (
     <div className="min-h-screen">
+      {/* Top Discount Banner */}
+      <div className="py-2.5 px-4 text-center" style={{ backgroundColor: '#2D150B' }}>
+        <p className="font-sans text-xs sm:text-sm" style={{ color: '#FFEFD2' }}>
+          Use code <span className="font-mono font-bold tracking-wider" style={{ color: '#CBAC96' }}>GIFT15</span> for 15% off our gift sets
+        </p>
+      </div>
+
       {/* Hero Section */}
       <section className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#FFEFD2' }}>
         {/* Decorative background elements */}
