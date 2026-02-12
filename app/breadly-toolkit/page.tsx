@@ -183,37 +183,37 @@ function BonusPageContent() {
               {'Expert insights and techniques for better baking'}
             </p>
           </div>
-          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide" style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
             {blogPosts.map((post) => (
-              <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow min-w-[280px] md:min-w-0 snap-start flex-shrink-0 md:flex-shrink">
-                <div className="aspect-video overflow-hidden">
+              <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow w-[200px] min-w-[200px] md:w-auto md:min-w-0 snap-start flex-shrink-0 md:flex-shrink">
+                <div className="aspect-[4/3] md:aspect-video overflow-hidden">
                   <img
                     src={post.image || "/placeholder.svg"}
                     alt={post.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge variant="secondary" className="font-sans text-xs">
+                <CardHeader className="p-3 md:p-6">
+                  <div className="flex items-center justify-between mb-1 md:mb-2">
+                    <Badge variant="secondary" className="font-sans text-[10px] md:text-xs">
                       {post.category}
                     </Badge>
-                    <span className="flex items-center gap-1 text-xs text-muted-foreground font-sans">
+                    <span className="flex items-center gap-1 text-[10px] md:text-xs text-muted-foreground font-sans">
                       <Clock className="h-3 w-3" />
                       {post.readTime}
                     </span>
                   </div>
-                  <CardTitle className="font-serif text-lg mb-2 text-balance leading-tight">
+                  <CardTitle className="font-serif text-sm md:text-lg mb-1 md:mb-2 text-balance leading-tight line-clamp-2">
                     {post.title}
                   </CardTitle>
-                  <CardDescription className="font-sans text-sm leading-relaxed">
+                  <CardDescription className="font-sans text-xs md:text-sm leading-relaxed line-clamp-2 hidden md:block">
                     {post.excerpt}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <Button variant="outline" className="w-full font-sans bg-transparent" asChild>
+                <CardContent className="p-3 pt-0 md:p-6 md:pt-0">
+                  <Button variant="outline" className="w-full font-sans bg-transparent text-xs md:text-sm h-8 md:h-10" asChild>
                     <a href={post.url} target="_blank" rel="noopener noreferrer">
-                      <BookOpen className="h-4 w-4 mr-2" />
+                      <BookOpen className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
                       Read More
                     </a>
                   </Button>
