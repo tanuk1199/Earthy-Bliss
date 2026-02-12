@@ -148,11 +148,12 @@ function BonusPageContent() {
   return (
     <div className="min-h-screen">
       {/* Top Discount Banner */}
-      <div className="py-2.5 px-4 text-center" style={{ backgroundColor: '#2D150B' }}>
-        <p className="font-sans text-xs sm:text-sm" style={{ color: '#FFEFD2' }}>
-          Use code <span className="font-mono font-bold tracking-wider" style={{ color: '#CBAC96' }}>GIFT15</span> for 15% off our gift sets
+      <a href="#gift-sets" className="block py-2.5 px-4 text-center no-underline" style={{ backgroundColor: '#2D150B' }} onClick={(e) => { e.preventDefault(); document.getElementById('gift-sets')?.scrollIntoView({ behavior: 'smooth' }) }}>
+        <p className="font-sans text-xs sm:text-sm inline-flex items-center gap-1.5" style={{ color: '#FFEFD2' }}>
+          Use code <span className="font-mono font-bold tracking-wider px-2 py-0.5 rounded mx-0.5" style={{ backgroundColor: 'rgba(203, 172, 150, 0.2)', color: '#CBAC96' }}>GIFT15</span> for 15% off our gift sets
+          <svg className="h-3 w-3 animate-bounce" style={{ color: '#CBAC96' }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
         </p>
-      </div>
+      </a>
 
       {/* Hero Section */}
       <section className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden" style={{ backgroundColor: '#FFEFD2' }}>
@@ -572,7 +573,7 @@ function BonusPageContent() {
       </section>
 
       {/* Gift Sets — for buying for others */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">
+      <section id="gift-sets" className="py-20 px-4 sm:px-6 lg:px-8 bg-background scroll-mt-4">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12 text-center">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-3">
