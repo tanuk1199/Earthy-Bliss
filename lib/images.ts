@@ -20,6 +20,16 @@ export const articleImages = {
     "https://cdn.shopify.com/s/files/1/0736/5279/7743/files/gempages_509452855887790979-8f0afd90-1410-42bd-aa80-258849e37dbf.webp?v=1769660791",
 }
 
+// ─── GUIDES / TECHNIQUES ────────────────────────────────
+export const guideImages = {
+  howToScoreBread:
+    "https://blog.earthyblissco.com/images/blog/how-to-score-bread.png",
+  howToKneadDough:
+    "https://blog.earthyblissco.com/images/blog/how-to-knead-dough.png",
+  eggWashBreadGuide:
+    "https://blog.earthyblissco.com/images/blog/egg-wash-bread-guide.png",
+}
+
 // ─── EBOOKS ──────────────────────────────────────────────
 export const ebookImages = {
   starterRescue:

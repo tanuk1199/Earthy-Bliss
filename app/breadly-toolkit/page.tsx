@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, Clock, BookOpen, Gift, Users, Copy, Check, Instagram, Facebook, Mail, Heart } from "lucide-react"
-import { articleImages, ebookImages, ebookDownloads, productImages, communityImages } from "@/lib/images"
+import { articleImages, guideImages, ebookImages, ebookDownloads, productImages, communityImages } from "@/lib/images"
 
 export default function BonusPage() {
   return (
@@ -71,6 +71,36 @@ function BonusPageContent() {
       readTime: "5 min read",
       image: articleImages.bananaBread,
       url: "https://blog.earthyblissco.com/blog/banana-bread-recipe"
+    }
+  ]
+
+  const guides = [
+    {
+      id: 1,
+      title: "How to Score Bread: Patterns, Tools, and Why It Matters",
+      excerpt: "Learn how to score bread with a lame or razor — depth, angle, patterns, and why it matters for oven spring.",
+      category: "Techniques",
+      readTime: "7 min read",
+      image: guideImages.howToScoreBread,
+      url: "https://blog.earthyblissco.com/blog/how-to-score-bread"
+    },
+    {
+      id: 2,
+      title: "How to Knead Bread Dough by Hand (With the Windowpane Test)",
+      excerpt: "Learn how to knead bread dough by hand with proper technique, timing, and the windowpane test.",
+      category: "Techniques",
+      readTime: "8 min read",
+      image: guideImages.howToKneadDough,
+      url: "https://blog.earthyblissco.com/blog/how-to-knead-dough"
+    },
+    {
+      id: 3,
+      title: "Egg Wash vs. Milk Wash vs. Butter: The Complete Bread Wash Guide",
+      excerpt: "Learn which bread wash gives you the crust you want — glossy, golden, soft, or crispy.",
+      category: "Guides",
+      readTime: "7 min read",
+      image: guideImages.eggWashBreadGuide,
+      url: "https://blog.earthyblissco.com/blog/egg-wash-bread-guide"
     }
   ]
 
@@ -213,6 +243,58 @@ function BonusPageContent() {
                 <CardContent className="p-3 pt-0 md:p-6 md:pt-0">
                   <Button variant="outline" className="w-full font-sans bg-transparent text-xs md:text-sm h-8 md:h-10" asChild>
                     <a href={post.url} target="_blank" rel="noopener noreferrer">
+                      <BookOpen className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
+                      Read More
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Guides & Techniques */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground mb-3">
+              Guides & Techniques
+            </h2>
+            <p className="font-sans text-muted-foreground text-lg">
+              {'Master the fundamentals of artisan bread baking'}
+            </p>
+          </div>
+          <div className="flex md:grid md:grid-cols-3 gap-3 md:gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 pl-6 pr-4 md:mx-0 md:px-0" style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
+            {guides.map((guide) => (
+              <Card key={guide.id} className="overflow-hidden hover:shadow-lg transition-shadow w-[75vw] min-w-[75vw] md:w-auto md:min-w-0 snap-start flex-shrink-0 md:flex-shrink">
+                <div className="aspect-[4/3] md:aspect-video overflow-hidden">
+                  <img
+                    src={guide.image || "/placeholder.svg"}
+                    alt={guide.title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardHeader className="p-3 md:p-6">
+                  <div className="flex items-center justify-between mb-1 md:mb-2">
+                    <Badge variant="secondary" className="font-sans text-[10px] md:text-xs">
+                      {guide.category}
+                    </Badge>
+                    <span className="flex items-center gap-1 text-[10px] md:text-xs text-muted-foreground font-sans">
+                      <Clock className="h-3 w-3" />
+                      {guide.readTime}
+                    </span>
+                  </div>
+                  <CardTitle className="font-serif text-sm md:text-lg mb-1 md:mb-2 text-balance leading-tight line-clamp-2">
+                    {guide.title}
+                  </CardTitle>
+                  <CardDescription className="font-sans text-xs md:text-sm leading-relaxed line-clamp-2 hidden md:block">
+                    {guide.excerpt}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="p-3 pt-0 md:p-6 md:pt-0">
+                  <Button variant="outline" className="w-full font-sans bg-transparent text-xs md:text-sm h-8 md:h-10" asChild>
+                    <a href={guide.url} target="_blank" rel="noopener noreferrer">
                       <BookOpen className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
                       Read More
                     </a>
