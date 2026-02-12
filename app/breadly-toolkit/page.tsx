@@ -183,9 +183,9 @@ function BonusPageContent() {
               {'Expert insights and techniques for better baking'}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
             {blogPosts.map((post) => (
-              <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow min-w-[280px] md:min-w-0 snap-start flex-shrink-0 md:flex-shrink">
                 <div className="aspect-video overflow-hidden">
                   <img
                     src={post.image || "/placeholder.svg"}
@@ -481,7 +481,7 @@ function BonusPageContent() {
               {"Know someone who'd love great bread? There's a set for that."}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {/* Share the Craft Set */}
             <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
               <div className="aspect-square overflow-hidden bg-muted">
@@ -531,34 +531,6 @@ function BonusPageContent() {
                 </div>
                 <Button className="w-full font-sans" asChild>
                   <a href="https://earthyblissco.com/products/everything-sourdough-baking-set" target="_blank" rel="noopener noreferrer">
-                    Shop Now
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* The Heirloom Set */}
-            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 group">
-              <div className="aspect-square overflow-hidden bg-muted">
-                {/* IMAGE: Premium bundle — Breadly + cutting board + Bliss Bag + wood balm + spare blades — lifestyle shot */}
-                <img
-                  src={productImages.shareTheCraftSet}
-                  alt="The Heirloom Set"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="font-serif text-xl font-bold text-foreground mb-2">
-                  The Heirloom Set
-                </h3>
-                <p className="font-sans text-muted-foreground mb-4 leading-relaxed">
-                  {'For those special occasions. Anniversaries, weddings, housewarming. A gift they\'ll keep forever.'}
-                </p>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="font-sans text-2xl font-bold text-primary">$149</span>
-                </div>
-                <Button className="w-full font-sans" asChild>
-                  <a href="https://earthyblissco.com/products/heirloom-set" target="_blank" rel="noopener noreferrer">
                     Shop Now
                   </a>
                 </Button>
