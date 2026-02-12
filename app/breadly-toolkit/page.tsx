@@ -43,7 +43,7 @@ function BonusPageContent() {
       category: "Recipes",
       readTime: "7 min read",
       image: articleImages.goldenBurgerBuns,
-      url: "https://earthyblissco.com/blogs/news/perfect-homemade-bun"
+      url: "https://blog.earthyblissco.com/blog/perfect-homemade-bun"
     },
     {
       id: 2,
@@ -52,7 +52,7 @@ function BonusPageContent() {
       category: "Recipes",
       readTime: "6 min read",
       image: articleImages.fluffyBiscuits,
-      url: "https://earthyblissco.com/blogs/news/perfect-biscuit"
+      url: "https://blog.earthyblissco.com/blog/fluffy-homemade-biscuits"
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ function BonusPageContent() {
       category: "Recipes",
       readTime: "8 min read",
       image: articleImages.perfectFocaccia,
-      url: "https://earthyblissco.com/blogs/news/the-secret-to-perfect-focaccia"
+      url: "https://blog.earthyblissco.com/blog/easy-focaccia-recipe"
     },
     {
       id: 4,
@@ -70,7 +70,7 @@ function BonusPageContent() {
       category: "Recipes",
       readTime: "5 min read",
       image: articleImages.bananaBread,
-      url: "https://earthyblissco.com/blogs/news/banana-bread"
+      url: "https://blog.earthyblissco.com/blog/banana-bread-recipe"
     }
   ]
 
@@ -478,7 +478,7 @@ function BonusPageContent() {
               Gift Sets for Every Occasion
             </h2>
             <p className="font-sans text-muted-foreground text-lg">
-              {'Know someone who'd love great bread? There's a set for that.'}
+              {"Know someone who'd love great bread? There's a set for that."}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
